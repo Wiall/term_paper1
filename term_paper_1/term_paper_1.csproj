@@ -57,11 +57,11 @@
         <Reference Include="WindowsFormsIntegration" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Form1.cs">
+        <Compile Include="MainMenuForm.cs">
             <SubType>Form</SubType>
         </Compile>
-        <Compile Include="Form1.Designer.cs">
-            <DependentUpon>Form1.cs</DependentUpon>
+        <Compile Include="MainMenuForm.Designer.cs">
+            <DependentUpon>MainMenuForm.cs</DependentUpon>
         </Compile>
         <Compile Include="HeapSorting.cs" />
         <Compile Include="Program.cs"/>
@@ -88,11 +88,11 @@
         <Compile Include="SortingOptionsForm.Designer.cs">
           <DependentUpon>SortingOptionsForm.cs</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="Form1.resx">
-          <DependentUpon>Form1.cs</DependentUpon>
+        <EmbeddedResource Include="MainMenuForm.resx">
+          <DependentUpon>MainMenuForm.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Form1.uk-UA.resx">
-          <DependentUpon>Form1.cs</DependentUpon>
+        <EmbeddedResource Include="MainMenuForm.uk-UA.resx">
+          <DependentUpon>MainMenuForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>

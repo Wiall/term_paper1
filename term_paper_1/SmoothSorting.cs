@@ -4,7 +4,6 @@
     {
         private static bool IsAscending(int a, int b)
         {
-            ComparisonCount++;
             return a <= b;
         }
 
@@ -35,7 +34,6 @@
             
             while (b1 >= 3)
             {
-                ComparisonCount++;
                 r2 = r1 - b1 + c1;
 
                 if (!IsAscending(Array[r1 - 1], Array[r2]))
@@ -51,13 +49,15 @@
                 else
                 {
                     Array[r1] = Array[r2];
+                    SwapsCount++;
                     r1 = r2;
                     Down(ref b1, ref c1, ref temp);
+                    
                 }
             }
-            ComparisonCount++;
 
             Array[r1] = t;
+            SwapsCount++;
             SaveArrayState();
         }
 
@@ -73,14 +73,11 @@
 
             while (p1 > 0)
             {
-                ComparisonCount++;
                 while ((p1 & 1) == 0)
                 {
-                    ComparisonCount++;
                     p1 >>= 1;
                     Up(ref b1, ref c1, ref temp);
                 }
-                ComparisonCount++;
 
                 r3 = r1 - b1;
 
@@ -91,15 +88,14 @@
                 else
                 {
                     --p1;
-                    ComparisonCount++;
                     if (b1 == 1)
                     {
                         Array[r1] = Array[r3];
+                        SwapsCount++;
                         r1 = r3;
                     }
                     else
                     {
-                        ComparisonCount++;
                         if (b1 >= 3)
                         {
                             r2 = r1 - b1 + c1;
@@ -115,11 +111,13 @@
                             {
                                 Array[r1] = Array[r3];
                                 r1 = r3;
+                                SwapsCount++;
                             }
                             else
                             {
                                 Array[r1] = Array[r2];
                                 r1 = r2;
+                                SwapsCount++;
                                 Down(ref b1, ref c1, ref temp);
                                 p1 = 0;
                             }
@@ -128,10 +126,12 @@
                 }
             }
 
-            ComparisonCount++;
-
             if (r0 != r1)
+            {
                 Array[r1] = t;
+                SwapsCount++;
+            }
+                
 
             Sift();
             SaveArrayState();
@@ -147,6 +147,7 @@
                 T = Array[r];
                 Array[r] = Array[r1];
                 Array[r1] = T;
+                SwapsCount++;
                 Trinkle();
             }
         }
@@ -164,7 +165,6 @@
             while (q < N)
             {
                 r1 = r;
-                ComparisonCount += 2;
                 if ((p & 7) == 3)
                 {
                     b1 = b;
@@ -176,7 +176,6 @@
                 }
                 else if ((p & 3) == 1)
                 {
-                    ComparisonCount++;
                     if (q + c < N)
                     {
                         b1 = b;
@@ -190,13 +189,11 @@
 
                     Down(ref b, ref c, ref temp);
                     p = 2 * p;
-                    ComparisonCount++;
                     while (b > 1)
                     {
                         Down(ref b, ref c, ref temp);
                         p = 2 * p;
                     }
-                    ComparisonCount++;
 
                     ++p;
                 }
@@ -204,14 +201,12 @@
                 ++q;
                 ++r;
             }
-            ComparisonCount++;
             r1 = r;
             Trinkle();
             
             while (q > 1)
             {
                 --q;
-                ComparisonCount += 2;
                 if (b == 1)
                 {
                     --r;
@@ -219,20 +214,16 @@
                    
                     while ((p & 1) == 0)
                     {
-                        ComparisonCount++;
                         p /= 2;
                         Up(ref b, ref c, ref temp);
                     }
-                    ComparisonCount++;
                 }
                 else
                 {
-                    ComparisonCount++;
                     if (b >= 3)
                     {
                         --p;
                         r = r - b + c;
-                        ComparisonCount++;
                         if (p > 0)
                             SemiTrinkle();
 

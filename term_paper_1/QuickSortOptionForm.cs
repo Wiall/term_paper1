@@ -28,6 +28,6 @@ namespace term_paper_1
     public enum QuickSortingVariant
     {
         OnePivot,
-        OneMedianPivot,
+        OneMedianPivot
     }
 }

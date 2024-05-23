@@ -25,6 +25,7 @@ namespace term_paper_1
                     QuickSortingOnePivot quickSortingOnePivot = new QuickSortingOnePivot();
                     quickSortingOnePivot.QuickSort(0, Sorting.Array.Length - 1);
                     _sortMethod = quickSortingOnePivot;
+                    Sorting.ChosenSortingMethod = Sorting.SortingMethod.QuickSortOnePivot;
                     quickSortingOnePivot.SetSortingMethod(Sorting.SortingMethod.QuickSortOnePivot);
                     break;
                 }
@@ -33,6 +34,7 @@ namespace term_paper_1
                     QuickSortingMedianPivot quickSortingMedianPivot = new QuickSortingMedianPivot();
                     quickSortingMedianPivot.QuickSort(0, Sorting.Array.Length - 1);
                     _sortMethod = quickSortingMedianPivot;
+                    Sorting.ChosenSortingMethod = Sorting.SortingMethod.QuickSortMedianPivot;
                     quickSortingMedianPivot.SetSortingMethod(Sorting.SortingMethod.QuickSortMedianPivot);
                     break;
                 }
@@ -55,6 +57,7 @@ namespace term_paper_1
                         HeapSorting heapSort = new HeapSorting();
                         heapSort.HeapSort();
                         _sortMethod = heapSort;
+                        Sorting.ChosenSortingMethod = Sorting.SortingMethod.HeapSort;
                         heapSort.SetSortingMethod(Sorting.SortingMethod.HeapSort);
                     }
                     else if (radioButtonSmoothSort.Checked)
@@ -62,6 +65,7 @@ namespace term_paper_1
                         SmoothSorting smoothSort = new SmoothSorting();
                         smoothSort.SmoothSort();
                         _sortMethod = smoothSort;
+                        Sorting.ChosenSortingMethod = Sorting.SortingMethod.SmoothSort;
                         smoothSort.SetSortingMethod(Sorting.SortingMethod.SmoothSort);
                     }else
                     {
@@ -96,7 +100,7 @@ namespace term_paper_1
             }
             Hide();
             ResultsForm resultsForm = new ResultsForm(checkBoxVisualize.Checked);
-            resultsForm.UpdateComparisonCountLabel();
+            resultsForm.UpdateCountLabel();
             resultsForm.ShowDialog();
         }
         private bool CheckArrayElements()

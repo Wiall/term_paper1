@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace term_paper_1
 {
-    public partial class Form1 : Form
+    public partial class MainMenuForm : Form
     {
-        public Form1()
+        public MainMenuForm()
         {
             InitializeComponent();
         }

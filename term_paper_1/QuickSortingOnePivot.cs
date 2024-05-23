@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace term_paper_1
+﻿namespace term_paper_1
 {
     public class QuickSortingOnePivot : Sorting
     {
@@ -11,8 +9,7 @@ namespace term_paper_1
 
             for (var j = p; j < r; j++)
             {
-                ComparisonCount++;
-                if (Sorting.Array[j] <= pivot)
+                if (Array[j] <= pivot)
                 {
                     i += 1;
                     Swap(ref Array[i], ref Array[j]);
@@ -23,20 +20,18 @@ namespace term_paper_1
             return i + 1;
         }
 
-        public void QuickSort(int p, int r)
+        public void QuickSort(int p, int r, int depth = 0)
         {
             if (p < r)
             {
+                if (depth > MaxRecursionDepth)
+                {
+                    MaxRecursionDepth = depth;
+                }
                 var q = Partition(p, r);
-                QuickSort(p,q-1);
-                
-                QuickSort(q+1,r);
+                QuickSort(p, q - 1, depth + 1);
+                QuickSort(q + 1, r, depth + 1);
             }
-            
-        }
-        
-        public QuickSortingOnePivot()
-        {
         }
     }
 }

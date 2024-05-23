@@ -22,7 +22,6 @@ namespace term_paper_1
 
             if (l <= heapsize)
             {
-                ComparisonCount++;
                 if (Array[l] > Array[i])
                 {
                     largest = l;
@@ -31,7 +30,6 @@ namespace term_paper_1
         
             if (r <= heapsize)
             {
-                ComparisonCount++;
                 if (Array[r] > Array[largest])
                 {
                     largest = r;
@@ -41,6 +39,7 @@ namespace term_paper_1
             if (largest != i)
             {
                 (Array[i], Array[largest]) = (Array[largest], Array[i]);
+                SwapsCount++;
                 SaveArrayState();
                 MaxHeapify(largest, heapsize);
             }
@@ -62,6 +61,7 @@ namespace term_paper_1
             for (int i = Array.Length - 1; i >= 1; i--)
             {
                 (Array[0], Array[i]) = (Array[i], Array[0]);
+                SwapsCount++;
                 heapsize--;
                 MaxHeapify(0, heapsize);
             }

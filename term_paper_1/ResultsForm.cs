@@ -8,7 +8,7 @@ namespace term_paper_1
 {
     public partial class ResultsForm : Form
     {
-        private readonly int _rectangleWidth = 9;
+        private const int RectangleWidth = 9;
         private const int Spacing = 2;
         private Timer _animationTimer;
         private PictureBox _pictureBox;
@@ -54,7 +54,7 @@ namespace term_paper_1
             {
                 _tempArray = Sorting.ArrayStates[_currentStateIndex];
                 UpdatePictureBox();
-                UpdateComparisonCountLabel();
+                UpdateCountLabel();
                 _currentStateIndex++;
             }
             else
@@ -71,7 +71,7 @@ namespace term_paper_1
     
             int arrayLength = Sorting.Array.Length;
     
-            int totalRectanglesWidth = arrayLength * _rectangleWidth + (arrayLength - 1) * Spacing;
+            int totalRectanglesWidth = arrayLength * RectangleWidth + (arrayLength - 1) * Spacing;
             int totalRectanglesHeight = _tempArray.Max() * 3;
     
             int startX = (pictureBoxWidth - totalRectanglesWidth) / 2;
@@ -87,7 +87,7 @@ namespace term_paper_1
 
                 int rectangleHeight = Math.Abs(value) * 2;
 
-                int rectangleWidth = _rectangleWidth;
+                int rectangleWidth = RectangleWidth;
                 int rectangleX = startX + i * (rectangleWidth + Spacing);
                 int rectangleY = startY + (totalRectanglesHeight - rectangleHeight);
 
@@ -123,25 +123,24 @@ namespace term_paper_1
         }
         
         private void UpdatePictureBox() => _pictureBox.Invalidate();
-        public void UpdateComparisonCountLabel() => label1.Text = "Кількість порівнянь при сортуванні: " + Sorting.ComparisonCount;
+        public void UpdateCountLabel()
+        {
+            if (Sorting.ChosenSortingMethod == Sorting.SortingMethod.HeapSort ||Sorting.ChosenSortingMethod == Sorting.SortingMethod.SmoothSort)
+            {
+                label1.Text = "Практична складність алгоритму: " + Sorting.SwapsCount;
+            }
+            else
+            {
+                label1.Text = "Практична складність алгоритму: " + Sorting.MaxRecursionDepth * Sorting.Array.Length;
+            }
+            
+        }
         private void buttonReturnToMenu_Click(object sender, EventArgs e) => Hide();
         private void buttonStartAnimation_Click(object sender, EventArgs e) => StartAnimation();
         private void buttonStopAnimation_Click(object sender, EventArgs e) => StopAnimation();
         private void StopAnimation() => _animationTimer.Stop();
-
-        private void radioButton05speed_CheckedChanged(object sender, EventArgs e)
-        {
-            _animationTimer.Interval = 300;
-        }
-
-        private void radioButton10speed_CheckedChanged(object sender, EventArgs e)
-        {
-            _animationTimer.Interval = 200;
-        }
-
-        private void radioButton15speed_CheckedChanged(object sender, EventArgs e)
-        {
-            _animationTimer.Interval = 100;
-        }
+        private void radioButton05speed_CheckedChanged(object sender, EventArgs e) => _animationTimer.Interval = 300;
+        private void radioButton10speed_CheckedChanged(object sender, EventArgs e) => _animationTimer.Interval = 200;
+        private void radioButton15speed_CheckedChanged(object sender, EventArgs e) => _animationTimer.Interval = 100;
     }
 }

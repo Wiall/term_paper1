@@ -21,14 +21,18 @@ namespace term_paper_1
 
         private static int[] _arrCopy;
         public static List<int[]> ArrayStates { get; set; }
-        public static int ComparisonCount { get; protected set; }
+        public static int SwapsCount { get; protected set; }
+        public static int MaxRecursionDepth { get; protected set; }
         public static SortingVariant ChosenVariant;
-        private SortingMethod _sortingMethod;
+        private SortingMethod _chosenSortingMethod;
+        public static SortingMethod ChosenSortingMethod { get; set; }
+        
 
         public Sorting()
         {
             ArrayStates = new List<int[]>();
-            ComparisonCount = 0;
+            SwapsCount = 0;
+            MaxRecursionDepth = 0;
         }
 
         public static void SaveArrayState()
@@ -68,7 +72,7 @@ namespace term_paper_1
             SaveArrayState();
         }
 
-        public void SetSortingMethod(SortingMethod method) => _sortingMethod = method;
+        public void SetSortingMethod(SortingMethod method) => _chosenSortingMethod = method;
         public void FillArray(int length, SortingVariant variant, int minValue, int maxValue)
         {
             Array = new int[length];
@@ -115,7 +119,7 @@ namespace term_paper_1
             string fileName = "save_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
             using (StreamWriter sw = new StreamWriter(fileName))
             {
-                sw.WriteLine($"Sorting: {_sortingMethod}\nVariant: {ChosenVariant}\nComparisons: {ComparisonCount}");
+                sw.WriteLine($"Sorting: {_chosenSortingMethod}\nVariant: {ChosenVariant}\nComparisons: {SwapsCount}");
                 sw.WriteLine("Array before sorting:");
                 WriteArrayToFile(sw, _arrCopy);
                 sw.WriteLine("\nArray after sorting:");
