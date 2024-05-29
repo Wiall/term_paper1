@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace term_paper_1
+﻿namespace term_paper_1
 {
     public class HeapSorting : Sorting
     {

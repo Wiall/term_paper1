@@ -22,7 +22,7 @@ namespace term_paper_1
         private static int[] _arrCopy;
         public static List<int[]> ArrayStates { get; set; }
         public static int SwapsCount { get; protected set; }
-        public static int MaxRecursionDepth { get; protected set; }
+        public static long MaxRecursionDepth { get; protected set; }
         public static SortingVariant ChosenVariant;
         private SortingMethod _chosenSortingMethod;
         public static SortingMethod ChosenSortingMethod { get; set; }
@@ -117,9 +117,23 @@ namespace term_paper_1
         public void SaveResults()
         {
             string fileName = "save_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
+            long practicalComplexity;
+
+            switch (_chosenSortingMethod)
+            {
+                case SortingMethod.QuickSortOnePivot:
+                case SortingMethod.QuickSortMedianPivot:
+                    practicalComplexity = MaxRecursionDepth * Array.Length;
+                    break;
+                default:
+                    practicalComplexity = SwapsCount;
+                    break;
+            }
+
+            Console.WriteLine(practicalComplexity);
             using (StreamWriter sw = new StreamWriter(fileName))
             {
-                sw.WriteLine($"Sorting: {_chosenSortingMethod}\nVariant: {ChosenVariant}\nComparisons: {SwapsCount}");
+                sw.WriteLine($"Sorting: {_chosenSortingMethod}\nVariant: {ChosenVariant}\nPractical complexity: {practicalComplexity}");
                 sw.WriteLine("Array before sorting:");
                 WriteArrayToFile(sw, _arrCopy);
                 sw.WriteLine("\nArray after sorting:");

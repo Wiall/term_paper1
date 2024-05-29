@@ -36,7 +36,7 @@ namespace term_paper_1
 
         public void QuickSort(int p, int r)
         {
-            QuickSortHelper(p, r, 0); // Початкова глибина 0
+            QuickSortHelper(p, r, 0);
         }
 
         private void QuickSortHelper(int p, int r, int depth)
@@ -69,11 +69,6 @@ namespace term_paper_1
                     }
                 }
             }
-        }
-
-
-        public QuickSortingMedianPivot()
-        {
         }
     }
 }

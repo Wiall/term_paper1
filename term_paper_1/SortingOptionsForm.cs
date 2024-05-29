@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace term_paper_1
@@ -23,7 +24,14 @@ namespace term_paper_1
                 case QuickSortingVariant.OnePivot:
                 {
                     QuickSortingOnePivot quickSortingOnePivot = new QuickSortingOnePivot();
-                    quickSortingOnePivot.QuickSort(0, Sorting.Array.Length - 1);
+                    Thread sortingThread = new Thread(() =>
+                    {
+                        quickSortingOnePivot.QuickSort(0, Sorting.Array.Length - 1);
+                    }, 1024 * 1024 * 64);
+
+                    sortingThread.Start();
+                    sortingThread.Join();
+                    
                     _sortMethod = quickSortingOnePivot;
                     Sorting.ChosenSortingMethod = Sorting.SortingMethod.QuickSortOnePivot;
                     quickSortingOnePivot.SetSortingMethod(Sorting.SortingMethod.QuickSortOnePivot);
