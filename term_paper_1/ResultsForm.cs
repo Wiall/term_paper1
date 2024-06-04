@@ -97,7 +97,7 @@ namespace term_paper_1
                 SizeF textSize = e.Graphics.MeasureString(text, font);
                 float textX = rectangleX + (rectangleWidth - textSize.Width) / 2;
                 float textY = rectangleY + (rectangleHeight - textSize.Height) / 2;
-                e.Graphics.DrawString(text, font, Brushes.Black, textX, textY);
+                //e.Graphics.DrawString(text, font, Brushes.Black, textX, textY);
             }
         }
 

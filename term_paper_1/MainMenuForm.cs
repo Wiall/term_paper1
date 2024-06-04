@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace term_paper_1
@@ -25,7 +26,8 @@ namespace term_paper_1
                 variant = Sorting.SortingVariant.Order;
             else if (radioButton3.Checked)
                 variant = Sorting.SortingVariant.Invert;
-            if (!int.TryParse(textBox2.Text, out int minValue) || !int.TryParse(textBox3.Text, out int maxValue))
+            if (!double.TryParse(textBox2.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out double minValue)
+                || !double.TryParse(textBox3.Text,NumberStyles.Float, CultureInfo.InvariantCulture, out double maxValue))
             {
                 MessageBox.Show("Некоректні значення мінімуму або максимуму.");
                 return;

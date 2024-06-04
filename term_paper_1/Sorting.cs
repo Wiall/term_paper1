@@ -73,36 +73,31 @@ namespace term_paper_1
         }
 
         public void SetSortingMethod(SortingMethod method) => _chosenSortingMethod = method;
-        public void FillArray(int length, SortingVariant variant, int minValue, int maxValue)
+        public void FillArray(int length, SortingVariant variant, double minValue, double maxValue)
         {
             Array = new double[length];
-
+            double step = (maxValue - minValue)/(length - 1);
             switch (variant)
             {
                 case SortingVariant.Random:
                     Random random = new Random();
-                    HashSet<double> uniqueNumbers = new HashSet<double>();
                     for (int i = 0; i < length; i++)
                     {
-                        int randomNumber;
-                        do
-                        {
-                            randomNumber = random.Next(minValue, maxValue + 1);
-                        } while (!uniqueNumbers.Add(randomNumber));
-                
+                        double randomNumber = minValue + (random.NextDouble() * (maxValue - minValue));
                         Array[i] = randomNumber;
                     }
                     break;
                 case SortingVariant.Order:
                     for (int i = 0; i < length; i++)
                     {
-                        Array[i] = minValue + i;
+                        Array[i] = minValue + i * step;
                     }
                     break;
                 case SortingVariant.Invert:
+                    
                     for (int i = 0; i < length; i++)
                     {
-                        Array[i] = maxValue - i;
+                        Array[i] = maxValue - i  * step;
                     }
                     break;
                 default:
