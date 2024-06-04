@@ -20,7 +20,7 @@ namespace term_paper_1
         }
 
         private static double[] _arrCopy;
-        public static List<int[]> ArrayStates { get; set; }
+        public static List<double[]> ArrayStates { get; set; }
         public static int SwapsCount { get; protected set; }
         public static long MaxRecursionDepth { get; protected set; }
         public static SortingVariant ChosenVariant;
@@ -30,7 +30,7 @@ namespace term_paper_1
 
         public Sorting()
         {
-            ArrayStates = new List<int[]>();
+            ArrayStates = new List<double[]>();
             SwapsCount = 0;
             MaxRecursionDepth = 0;
         }
@@ -39,15 +39,15 @@ namespace term_paper_1
         {
             if (_array.Length == 100)
             {
-                int[] stateCopy = new int[Array.Length];
+                double[] stateCopy = new double[Array.Length];
                 Array.CopyTo(stateCopy, 0);
                 ArrayStates.Add(stateCopy);
             }
         }
         
-        public static List<int[]> FilterConsecutiveStates(List<int[]> states)
+        public static List<double[]> FilterConsecutiveStates(List<double[]> states)
         {
-            List<int[]> filteredStates = new List<int[]>();
+            List<double[]> filteredStates = new List<double[]>();
 
             if (states.Count == 0)
                 return filteredStates;
@@ -81,7 +81,7 @@ namespace term_paper_1
             {
                 case SortingVariant.Random:
                     Random random = new Random();
-                    HashSet<int> uniqueNumbers = new HashSet<int>();
+                    HashSet<double> uniqueNumbers = new HashSet<double>();
                     for (int i = 0; i < length; i++)
                     {
                         int randomNumber;

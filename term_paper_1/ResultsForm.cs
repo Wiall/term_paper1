@@ -12,7 +12,7 @@ namespace term_paper_1
         private const int Spacing = 2;
         private Timer _animationTimer;
         private PictureBox _pictureBox;
-        private int[] _tempArray;
+        private double[] _tempArray;
         private int _currentStateIndex;
         private readonly bool _visualCheck;
         private readonly Color _rectangleColor1 = ColorTranslator.FromHtml("#7D94C4");
@@ -72,7 +72,7 @@ namespace term_paper_1
             int arrayLength = Sorting.Array.Length;
     
             int totalRectanglesWidth = arrayLength * RectangleWidth + (arrayLength - 1) * Spacing;
-            int totalRectanglesHeight = _tempArray.Select(Math.Abs).Max() * 3;
+            int totalRectanglesHeight = (int)_tempArray.Select(Math.Abs).Max() * 3;
     
             int startX = (pictureBoxWidth - totalRectanglesWidth) / 2;
             int startY = (pictureBoxHeight - totalRectanglesHeight) / 2;
@@ -81,11 +81,11 @@ namespace term_paper_1
 
             for (int i = 0; i < arrayLength; i++)
             {
-                int value = _tempArray[i];
+                double value = _tempArray[i];
 
                 Brush brush = (value < 0) ? new SolidBrush(_rectangleColor2) : new SolidBrush(_rectangleColor1);
 
-                int rectangleHeight = Math.Abs(value) * 2;
+                int rectangleHeight = (int)Math.Abs(value) * 2;
 
                 int rectangleWidth = RectangleWidth;
                 int rectangleX = startX + i * (rectangleWidth + Spacing);
