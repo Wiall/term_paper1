@@ -72,7 +72,7 @@ namespace term_paper_1
             int arrayLength = Sorting.Array.Length;
     
             int totalRectanglesWidth = arrayLength * RectangleWidth + (arrayLength - 1) * Spacing;
-            int totalRectanglesHeight = _tempArray.Max() * 3;
+            int totalRectanglesHeight = _tempArray.Select(Math.Abs).Max() * 3;
     
             int startX = (pictureBoxWidth - totalRectanglesWidth) / 2;
             int startY = (pictureBoxHeight - totalRectanglesHeight) / 2;

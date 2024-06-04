@@ -84,10 +84,7 @@ namespace term_paper_1
                     break;
                 }
             }
-            if (checkBoxSaving.Checked && _sortMethod != null)
-            {
-                _sortMethod.SaveResults();
-            }
+            
             
             
             if (Sorting.Array.Length > 100 && checkBoxVisualize.Checked )
@@ -105,6 +102,10 @@ namespace term_paper_1
                 
                 Sorting.ArrayStates = Sorting.FilterConsecutiveStates(Sorting.ArrayStates);
                 Sorting.SaveArrayState();
+            }
+            if (checkBoxSaving.Checked && _sortMethod != null)
+            {
+                _sortMethod.SaveResults();
             }
             Hide();
             ResultsForm resultsForm = new ResultsForm(checkBoxVisualize.Checked);

@@ -49,7 +49,7 @@ namespace term_paper_1
             this.radioButtonQuickSort.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.radioButtonQuickSort.Location = new System.Drawing.Point(95, 95);
             this.radioButtonQuickSort.Name = "radioButtonQuickSort";
-            this.radioButtonQuickSort.Size = new System.Drawing.Size(196, 38);
+            this.radioButtonQuickSort.Size = new System.Drawing.Size(217, 38);
             this.radioButtonQuickSort.TabIndex = 1;
             this.radioButtonQuickSort.TabStop = true;
             this.radioButtonQuickSort.Text = "Швидке сортування";
@@ -62,7 +62,7 @@ namespace term_paper_1
             this.radioButtonHeapSort.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.radioButtonHeapSort.Location = new System.Drawing.Point(318, 99);
             this.radioButtonHeapSort.Name = "radioButtonHeapSort";
-            this.radioButtonHeapSort.Size = new System.Drawing.Size(251, 30);
+            this.radioButtonHeapSort.Size = new System.Drawing.Size(261, 30);
             this.radioButtonHeapSort.TabIndex = 2;
             this.radioButtonHeapSort.TabStop = true;
             this.radioButtonHeapSort.Text = "Пірамідальне сортування";
@@ -75,7 +75,7 @@ namespace term_paper_1
             this.radioButtonSmoothSort.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.radioButtonSmoothSort.Location = new System.Drawing.Point(585, 102);
             this.radioButtonSmoothSort.Name = "radioButtonSmoothSort";
-            this.radioButtonSmoothSort.Size = new System.Drawing.Size(188, 24);
+            this.radioButtonSmoothSort.Size = new System.Drawing.Size(234, 24);
             this.radioButtonSmoothSort.TabIndex = 3;
             this.radioButtonSmoothSort.TabStop = true;
             this.radioButtonSmoothSort.Text = "Плавне сортування";
@@ -88,7 +88,7 @@ namespace term_paper_1
             this.checkBoxSaving.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.checkBoxSaving.Location = new System.Drawing.Point(318, 246);
             this.checkBoxSaving.Name = "checkBoxSaving";
-            this.checkBoxSaving.Size = new System.Drawing.Size(211, 30);
+            this.checkBoxSaving.Size = new System.Drawing.Size(390, 30);
             this.checkBoxSaving.TabIndex = 4;
             this.checkBoxSaving.Text = "Зберегти результати";
             this.checkBoxSaving.UseVisualStyleBackColor = false;
@@ -100,7 +100,7 @@ namespace term_paper_1
             this.checkBoxVisualize.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.checkBoxVisualize.Location = new System.Drawing.Point(318, 211);
             this.checkBoxVisualize.Name = "checkBoxVisualize";
-            this.checkBoxVisualize.Size = new System.Drawing.Size(226, 29);
+            this.checkBoxVisualize.Size = new System.Drawing.Size(390, 29);
             this.checkBoxVisualize.TabIndex = 5;
             this.checkBoxVisualize.Text = "Показати візуалізацію";
             this.checkBoxVisualize.UseVisualStyleBackColor = false;
@@ -132,7 +132,7 @@ namespace term_paper_1
             this.label1.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.label1.Location = new System.Drawing.Point(294, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 33);
+            this.label1.Size = new System.Drawing.Size(414, 33);
             this.label1.TabIndex = 8;
             this.label1.Text = "Оберіть метод сортування:";
             // 
@@ -152,7 +152,8 @@ namespace term_paper_1
             this.Controls.Add(this.radioButtonQuickSort);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
-            this.MinimumSize = new System.Drawing.Size(740, 400);
+            this.MaximumSize = new System.Drawing.Size(873, 504);
+            this.MinimumSize = new System.Drawing.Size(873, 504);
             this.Name = "SortingOptionsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sorting";

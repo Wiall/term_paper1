@@ -4,12 +4,12 @@
     {
         int Left(int i)
         {
-            return 2 * i;
+            return 2 * i + 1;
         }
         
         int Right(int i)
         {
-            return 2 * i + 1;
+            return 2 * i + 2;
         }
         
         void MaxHeapify(int i, int heapsize)

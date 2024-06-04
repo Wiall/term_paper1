@@ -22,7 +22,6 @@ namespace term_paper_1
             DialogResult = DialogResult.OK;
             Close();
         }
-        
     }
 
     public enum QuickSortingVariant

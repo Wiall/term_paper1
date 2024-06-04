@@ -109,7 +109,7 @@ namespace term_paper_1
             this.radioButton05speed.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton05speed.BackColor = System.Drawing.Color.Transparent;
             this.radioButton05speed.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton05speed.Location = new System.Drawing.Point(1015, 43);
+            this.radioButton05speed.Location = new System.Drawing.Point(1226, 56);
             this.radioButton05speed.Name = "radioButton05speed";
             this.radioButton05speed.Size = new System.Drawing.Size(130, 35);
             this.radioButton05speed.TabIndex = 4;
@@ -123,7 +123,7 @@ namespace term_paper_1
             this.radioButton10speed.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton10speed.BackColor = System.Drawing.Color.Transparent;
             this.radioButton10speed.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton10speed.Location = new System.Drawing.Point(1015, 84);
+            this.radioButton10speed.Location = new System.Drawing.Point(1226, 97);
             this.radioButton10speed.Name = "radioButton10speed";
             this.radioButton10speed.Size = new System.Drawing.Size(114, 31);
             this.radioButton10speed.TabIndex = 5;
@@ -137,7 +137,7 @@ namespace term_paper_1
             this.radioButton15speed.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton15speed.BackColor = System.Drawing.Color.Transparent;
             this.radioButton15speed.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton15speed.Location = new System.Drawing.Point(1015, 121);
+            this.radioButton15speed.Location = new System.Drawing.Point(1226, 134);
             this.radioButton15speed.Name = "radioButton15speed";
             this.radioButton15speed.Size = new System.Drawing.Size(114, 29);
             this.radioButton15speed.TabIndex = 5;
@@ -151,9 +151,9 @@ namespace term_paper_1
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(1011, 25);
+            this.label2.Location = new System.Drawing.Point(1222, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 17);
+            this.label2.Size = new System.Drawing.Size(118, 33);
             this.label2.TabIndex = 6;
             this.label2.Text = "Швидкість";
             // 

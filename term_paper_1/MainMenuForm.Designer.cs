@@ -47,7 +47,7 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(412, 115);
+            this.textBox1.Location = new System.Drawing.Point(411, 115);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(251, 22);
             this.textBox1.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.textBox2.Location = new System.Drawing.Point(462, 205);
+            this.textBox2.Location = new System.Drawing.Point(461, 205);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(75, 22);
             this.textBox2.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.textBox3.Location = new System.Drawing.Point(592, 205);
+            this.textBox3.Location = new System.Drawing.Point(591, 205);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(75, 22);
             this.textBox3.TabIndex = 3;
@@ -76,9 +76,9 @@
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Font = new System.Drawing.Font("Sitka Text", 7.8F);
             this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(30)))));
-            this.radioButton1.Location = new System.Drawing.Point(302, 325);
+            this.radioButton1.Location = new System.Drawing.Point(301, 325);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(120, 50);
+            this.radioButton1.Size = new System.Drawing.Size(155, 50);
             this.radioButton1.TabIndex = 4;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Випадкове";
@@ -90,9 +90,9 @@
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Font = new System.Drawing.Font("Sitka Text", 7.8F);
             this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(30)))));
-            this.radioButton2.Location = new System.Drawing.Point(482, 325);
+            this.radioButton2.Location = new System.Drawing.Point(481, 325);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(140, 50);
+            this.radioButton2.Size = new System.Drawing.Size(181, 50);
             this.radioButton2.TabIndex = 5;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Впорядковане";
@@ -105,9 +105,9 @@
             this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton3.Font = new System.Drawing.Font("Sitka Text", 7.8F);
             this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(30)))));
-            this.radioButton3.Location = new System.Drawing.Point(682, 325);
+            this.radioButton3.Location = new System.Drawing.Point(681, 325);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(140, 50);
+            this.radioButton3.Size = new System.Drawing.Size(167, 50);
             this.radioButton3.TabIndex = 6;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Зворотньо впорядковане";
@@ -127,7 +127,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(415, 381);
+            this.button1.Location = new System.Drawing.Point(414, 381);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button1.Size = new System.Drawing.Size(277, 68);
@@ -144,9 +144,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(30)))));
-            this.label1.Location = new System.Drawing.Point(432, 81);
+            this.label1.Location = new System.Drawing.Point(431, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 23);
+            this.label1.Size = new System.Drawing.Size(374, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "Введіть розмір масиву:";
             // 
@@ -156,9 +156,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Sitka Small", 10F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(30)))));
-            this.label2.Location = new System.Drawing.Point(382, 170);
+            this.label2.Location = new System.Drawing.Point(381, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(382, 25);
+            this.label2.Size = new System.Drawing.Size(550, 32);
             this.label2.TabIndex = 12;
             this.label2.Text = "Введіть діапазон значень у масиві:";
             // 
@@ -168,7 +168,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 8F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(30)))));
-            this.label3.Location = new System.Drawing.Point(415, 205);
+            this.label3.Location = new System.Drawing.Point(414, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 22);
             this.label3.TabIndex = 13;
@@ -180,7 +180,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(30)))));
-            this.label4.Location = new System.Drawing.Point(554, 205);
+            this.label4.Location = new System.Drawing.Point(553, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 22);
             this.label4.TabIndex = 14;
@@ -192,7 +192,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Sitka Small", 10.2F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(30)))));
-            this.label5.Location = new System.Drawing.Point(297, 272);
+            this.label5.Location = new System.Drawing.Point(296, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(509, 31);
             this.label5.TabIndex = 15;
@@ -206,7 +206,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(236)))), ((int)(((byte)(251)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1087, 583);
+            this.ClientSize = new System.Drawing.Size(1084, 583);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -222,7 +222,8 @@
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
-            this.MinimumSize = new System.Drawing.Size(800, 500);
+            this.MaximumSize = new System.Drawing.Size(1102, 630);
+            this.MinimumSize = new System.Drawing.Size(1102, 630);
             this.Name = "MainMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sorting";
