@@ -4,7 +4,7 @@
     {
         private int Partition(int p, int r)
         {
-            int pivot = Array[r];
+            double pivot = Array[r];
             var i = p - 1;
 
             for (var j = p; j < r; j++)

@@ -47,9 +47,9 @@ namespace term_paper_1
             this.radioButtonQuickSort.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonQuickSort.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonQuickSort.Font = new System.Drawing.Font("Sitka Small", 7.8F);
-            this.radioButtonQuickSort.Location = new System.Drawing.Point(95, 95);
+            this.radioButtonQuickSort.Location = new System.Drawing.Point(79, 95);
             this.radioButtonQuickSort.Name = "radioButtonQuickSort";
-            this.radioButtonQuickSort.Size = new System.Drawing.Size(217, 38);
+            this.radioButtonQuickSort.Size = new System.Drawing.Size(233, 63);
             this.radioButtonQuickSort.TabIndex = 1;
             this.radioButtonQuickSort.TabStop = true;
             this.radioButtonQuickSort.Text = "Швидке сортування";
@@ -62,7 +62,7 @@ namespace term_paper_1
             this.radioButtonHeapSort.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.radioButtonHeapSort.Location = new System.Drawing.Point(318, 99);
             this.radioButtonHeapSort.Name = "radioButtonHeapSort";
-            this.radioButtonHeapSort.Size = new System.Drawing.Size(261, 30);
+            this.radioButtonHeapSort.Size = new System.Drawing.Size(269, 59);
             this.radioButtonHeapSort.TabIndex = 2;
             this.radioButtonHeapSort.TabStop = true;
             this.radioButtonHeapSort.Text = "Пірамідальне сортування";
@@ -75,7 +75,7 @@ namespace term_paper_1
             this.radioButtonSmoothSort.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.radioButtonSmoothSort.Location = new System.Drawing.Point(585, 102);
             this.radioButtonSmoothSort.Name = "radioButtonSmoothSort";
-            this.radioButtonSmoothSort.Size = new System.Drawing.Size(234, 24);
+            this.radioButtonSmoothSort.Size = new System.Drawing.Size(258, 56);
             this.radioButtonSmoothSort.TabIndex = 3;
             this.radioButtonSmoothSort.TabStop = true;
             this.radioButtonSmoothSort.Text = "Плавне сортування";
@@ -88,7 +88,7 @@ namespace term_paper_1
             this.checkBoxSaving.Font = new System.Drawing.Font("Sitka Small", 7.8F);
             this.checkBoxSaving.Location = new System.Drawing.Point(318, 246);
             this.checkBoxSaving.Name = "checkBoxSaving";
-            this.checkBoxSaving.Size = new System.Drawing.Size(390, 30);
+            this.checkBoxSaving.Size = new System.Drawing.Size(390, 44);
             this.checkBoxSaving.TabIndex = 4;
             this.checkBoxSaving.Text = "Зберегти результати";
             this.checkBoxSaving.UseVisualStyleBackColor = false;
@@ -98,9 +98,9 @@ namespace term_paper_1
             this.checkBoxVisualize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxVisualize.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxVisualize.Font = new System.Drawing.Font("Sitka Small", 7.8F);
-            this.checkBoxVisualize.Location = new System.Drawing.Point(318, 211);
+            this.checkBoxVisualize.Location = new System.Drawing.Point(318, 201);
             this.checkBoxVisualize.Name = "checkBoxVisualize";
-            this.checkBoxVisualize.Size = new System.Drawing.Size(390, 29);
+            this.checkBoxVisualize.Size = new System.Drawing.Size(442, 48);
             this.checkBoxVisualize.TabIndex = 5;
             this.checkBoxVisualize.Text = "Показати візуалізацію";
             this.checkBoxVisualize.UseVisualStyleBackColor = false;

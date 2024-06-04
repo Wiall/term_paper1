@@ -106,6 +106,7 @@ namespace term_paper_1
             if (checkBoxSaving.Checked && _sortMethod != null)
             {
                 _sortMethod.SaveResults();
+                MessageBox.Show("Результати збережено у файл");
             }
             Hide();
             ResultsForm resultsForm = new ResultsForm(checkBoxVisualize.Checked);

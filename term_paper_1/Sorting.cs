@@ -8,8 +8,8 @@ namespace term_paper_1
 {
     public class Sorting
     {
-        private static int[] _array;
-        public static int[] Array
+        private static double[] _array;
+        public static double[] Array
         {
             get => _array;
             set
@@ -19,7 +19,7 @@ namespace term_paper_1
             }
         }
 
-        private static int[] _arrCopy;
+        private static double[] _arrCopy;
         public static List<int[]> ArrayStates { get; set; }
         public static int SwapsCount { get; protected set; }
         public static long MaxRecursionDepth { get; protected set; }
@@ -66,7 +66,7 @@ namespace term_paper_1
 
             return filteredStates;
         }
-        protected void Swap(ref int a, ref int b)
+        protected void Swap(ref double a, ref double b)
         {
             (a, b) = (b, a);
             SaveArrayState();
@@ -75,7 +75,7 @@ namespace term_paper_1
         public void SetSortingMethod(SortingMethod method) => _chosenSortingMethod = method;
         public void FillArray(int length, SortingVariant variant, int minValue, int maxValue)
         {
-            Array = new int[length];
+            Array = new double[length];
 
             switch (variant)
             {
@@ -109,7 +109,7 @@ namespace term_paper_1
                     throw new ArgumentException("Невідомий варіант заповнення");
             }
 
-            _arrCopy = new int[Array.Length];
+            _arrCopy = new double[Array.Length];
             System.Array.Copy(Array, _arrCopy, Array.Length);
 
         }
@@ -139,9 +139,9 @@ namespace term_paper_1
                 sw.WriteLine("\nArray after sorting:");
                 WriteArrayToFile(sw, Array);
             }
-            MessageBox.Show("Результати збережено у файл " + fileName);
+            
         }
-        private void WriteArrayToFile(StreamWriter sw, int[] array)
+        private void WriteArrayToFile(StreamWriter sw, double[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {

@@ -2,7 +2,7 @@
 {
     public class SmoothSorting : Sorting
     {
-        private static bool IsAscending(int a, int b)
+        private static bool IsAscending(double a, double b)
         {
             return a <= b;
         }
@@ -28,7 +28,7 @@
         private void Sift()
         {
             int r0, r2, temp = 0;
-            int t;
+            double t;
             r0 = r1;
             t = Array[r0];
             
@@ -64,7 +64,7 @@
         private void Trinkle()
         {
             int p1, r2, r3, r0, temp = 0;
-            int t;
+            double t;
             p1 = p;
             b1 = b;
             c1 = c;
@@ -139,7 +139,7 @@
 
         private void SemiTrinkle()
         {
-            int T;
+            double T;
             r1 = r - c;
 
             if (!IsAscending(Array[r1], Array[r]))
